@@ -48,5 +48,5 @@ def main():
 
     print("the number is: ")
     print(add_one(number, n))
-print("i love ad")
+print("i love adidi")
 main()

@@ -48,5 +48,6 @@ def main():
 
     print("the number is: ")
     print(add_one(number, n))
-print("i love adidi")
+print("this is a push test ")
+
 main()

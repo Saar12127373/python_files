@@ -1,5 +1,4 @@
-
-#turn from decimal to binary:
+# turn from decimal to binary:
 
 def decimalToBinary(number, n):
     arr = []
@@ -45,8 +44,15 @@ def main():
 
     number = int(input("enter the number you want to turn into bits: "))
     n = int(input("enter how many bits you would like to use: "))
+   
+    print(number)
 
-    print("the number is: ")
+    print("number in binary: ")
+
+    print(decimalToBinary(number, n))
+
+    print("the minus binary: ")
+
     print(add_one(number, n))
-print("i love ad")
+    print("i love adidi")
 main()

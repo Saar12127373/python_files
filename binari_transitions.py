@@ -54,5 +54,5 @@ def main():
     print("the minus binary: ")
 
     print(add_one(number, n))
-    print("i love adidi")
+    print("i love adididwadwadawdaw")
 main()

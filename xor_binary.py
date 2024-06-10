@@ -1,3 +1,5 @@
+# bonus mission file encryption:
+
 open_File = open(r"C:\8200\statring_binary\file.txt", "rb")
 data = open_File.read()
 open_File.close()

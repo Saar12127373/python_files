@@ -22,4 +22,3 @@ while True:
     
     msg_recv_len = int.from_bytes(recv_all(clint_socket, 2),"big")
     message = recv_all(clint_socket, msg_recv_len).decode()
-    

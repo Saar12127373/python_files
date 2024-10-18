@@ -7,6 +7,7 @@ connection.bind(("", 8000))
 connection.listen(5)
 
 while True:
-    connectedsocket, address = connection.accept()
+    server_sock, address = connection.accept()
     print("Connection from {address} established".format(address = address))
-    
+    msg = len("git it?")
+    server_sock.sendall("got it?".encode())

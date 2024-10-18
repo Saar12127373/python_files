@@ -4,7 +4,7 @@ import socket
 connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 connection.bind((socket.gethostname(), 8000))
-print(socket.gethostname())
+print(socket.gethostname() + " dwad")
 connection.listen(5)
 
 while True:

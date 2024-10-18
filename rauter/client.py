@@ -1,10 +1,10 @@
 
 import socket
 
-connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+clint_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-connection.connect(("", 8000))
+clint_socket.connect(("", 8000))
 
 while True:
 
-    message = connection.recv(1024)
+    message = clint_socket.recv(1024)

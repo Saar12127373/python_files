@@ -3,7 +3,7 @@ import socket
 
 connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-connection.bind((socket.gethostname(), 8000))
+connection.bind(("", 8000))
 connection.listen(5)
 
 while True:

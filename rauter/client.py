@@ -20,5 +20,5 @@ def recv_all(sock, length):
 
 while True:
     
-    msg_recv_len = clint_socket.recv(2)
-    message = clint_socket.recv(msg_recv_len)
+    msg_recv_len = recv_all(clint_socket, 2)
+    message = recv_all(clint_socket, msg_recv_len).decode()

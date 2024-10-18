@@ -3,12 +3,14 @@ import socket
 import time
 
 client1_ip = "10.0.0.21"
-client1_mac = 
+client1_mac = "80-E8-2C-F9-8D-7F"
+
+router = ("", 8200)
 
 
 clint_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-clint_socket.connect(("", 8000))
+clint_socket.connect((router))
 
 def recv_all(sock, length):
     msg = b""

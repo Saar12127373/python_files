@@ -9,5 +9,8 @@ connection.listen(5)
 while True:
     server_sock, address = connection.accept()
     print("Connection from {address} established".format(address = address))
-    msg = len("git it?")
-    server_sock.sendall("got it?".encode())
+    
+    msg = "got it?"
+    msg_len = len("got it?")
+    server_sock.sendall(msg_len.encode())
+    

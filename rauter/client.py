@@ -2,8 +2,8 @@
 import socket
 import time
 
-client1_ip = ""
-
+client1_ip = "10.0.0.21"
+client1_mac = 
 
 
 clint_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

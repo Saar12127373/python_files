@@ -11,7 +11,7 @@ while True:
     print("Connection from {address} established".format(address = address))
     
     msg = "got it?"
-    msg_len = len("got it?")
-    msg_len.to_bytes(server_sock.sendall(msg_len), "big")
+    msg_len_bytes = len(msg).to_bytes(2, byteorder='big')
+    server_sock.sendall(msg_len_bytes)
     server_sock.sendall(msg.encode())
     

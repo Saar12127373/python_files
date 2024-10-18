@@ -1,7 +1,8 @@
 
 import socket
+import time
 
-
+client1_ip = ""
 
 
 

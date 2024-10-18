@@ -13,7 +13,8 @@ def recv_all(sock, length):
     msg = b""
     while len(msg) < length:
         add = sock.recv(length - len(msg))
-        
+        msg += add
+    return msg
 
 
 

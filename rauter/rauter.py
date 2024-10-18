@@ -12,6 +12,6 @@ while True:
     
     msg = "got it?"
     msg_len = len("got it?")
-    int.to_bytes(server_sock.sendall(msg_len))
+    msg_len.to_bytes(server_sock.sendall(msg_len))
     server_sock.sendall(msg.encode())
     

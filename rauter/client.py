@@ -1,10 +1,22 @@
 
 import socket
 
+
+
+
+
 clint_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 clint_socket.connect(("", 8000))
 
-while True:
+def recv_all(clint_socket, length):
+    msg = ""
+    msg += clint_socket.
 
-    message = clint_socket.recv(1024)
+
+
+
+while True:
+    
+    msg_recv_len = clint_socket.recv(2)
+    message = clint_socket.recv(msg_recv_len)

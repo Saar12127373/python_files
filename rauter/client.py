@@ -9,10 +9,11 @@ clint_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 clint_socket.connect(("", 8000))
 
-def recv_all(clint_socket, length):
+def recv_all(sock, length):
     msg = b""
-    msg += clint_socket.
-
+    while len(msg) < length:
+        add = sock.recv(length - len(msg))
+        
 
 
 

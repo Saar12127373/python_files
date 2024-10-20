@@ -1,6 +1,6 @@
 import socket
 import time
-client2_ip = "92.10.10.20"
+client2_ip = "10.0.0.30"
 client2_mac = "10:AF:CB:EF:19:CF"
 router = ("localhost", 8200)
 client2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
